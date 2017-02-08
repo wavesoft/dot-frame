@@ -1,0 +1,20 @@
+{
+  "name": "dot-frame",
+  "version": "0.1.0",
+  "description": "A tiny (less than 512 bytes) CSS framework on tight spaces",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/lessc src/main.less | ./node_modules/.bin/cleancss -O2 | tee dot-frame.min.css | gzip -9 > dot-frame.min.css.gz"
+  },
+  "keywords": [
+    "css-framework",
+    "tiny"
+  ],
+  "author": "Ioannis charalampidis",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "clean-css-cli": "^4.0.5",
+    "less": "^2.7.2"
+  }
+}
